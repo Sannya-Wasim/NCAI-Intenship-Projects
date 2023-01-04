@@ -18,10 +18,9 @@
   </head>
 
   <body>
-    <div id="map">
+    <div id="map" onclick="point_it(event)">
       <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
       <script src="./overlay.js"></script>
-      <div id="img" onclick="point_it(event)" style="border: 2px solid black; width: 200px; height: 200px; color:red;"></div>
       <script src="https://cdn.jsdelivr.net/npm/ol@v7.2.2/dist/ol.js"></script>
       <link
         rel="stylesheet"
