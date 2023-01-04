@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function point_it(event){
+            pos_x= event.offsetX ? (event.offsetX) : event.pageX - document.getElementById("pointer_div").offsetLeft;
+            pos_y= event.offsetY ? (event.offsetY) : event.pageY - document.getElementById("pointer_div").offsetTop;
+            document.pointform.form_x.value = pos_x;
+            document.pointform.form_y.value = pos_y;
+        }
+    </script>
+
+  </head>
+  <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <form name="pointform" method="post">
+      <div style=" left: 100px; top: 100px">
+        <h1>Get Image Coordinates</h1>
+      </div>
+
+      <div style="clear: both; height: 5px"></div>
+
+      <div
+        id="pointer_div"
+        onclick="point_it(event)">
+      <img src="image.png" style="width: 500px; height: 300px;"></img>
+    </div>
+
+      
+      <div style="left: 20px; top: 280px">
+        You pointed on x=
+        <input type="text" name="form_x" size="4" >
+        -y =
+        <input type="text" name="form_y" size="4">
+        </div>
+    </form>
+  </body>
+</html>

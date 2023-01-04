@@ -1,0 +1,21 @@
+#map { 
+    height: 180vh; 
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+pre {
+    min-width:300px;
+    white-space: pre-wrap;     
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;    
+    white-space: -o-pre-wrap;  
+    word-wrap: break-word;     
+}
+
+.leaflet-popup-content-wrapper {
+    min-width: 350px;
+}
